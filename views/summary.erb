@@ -1,0 +1,32 @@
+<h1 class="city-head"><%=@trip.city%></h1>
+
+
+  <a class="trot-group go" href="/trips/<%= @trip.id %>/go">
+    <h1 class="trot-head">GO</h1>
+      <ul class="trot-list">
+        <% @goers.each do |go| %>
+          <li class="trots"><%=go.name%></li>
+        <% end %>
+      </ul>
+  </a>
+
+
+  <a class="trot-group eat" href="/trips/<%= @trip.id %>/eat">
+    <h1 class="trot-head">EAT</h1>
+      <ul class="trot-list">
+        <% @eats.each do |eat| %>
+          <li class="trots"><%=eat.name%></li>
+        <% end %>
+      </ul>
+  </a>
+
+
+
+  <a class="trot-group sleep" href="/trips/<%= @trip.id %>/sleep">
+      <h1 class="trot-head">SLEEP</h1>
+        <ul class="trot-list">
+          <% @sleeps.each do |sleep| %>
+            <li class="trots"><%=sleep.name%></li>
+          <% end %>
+        </ul>
+  </a><!--end of trot-group-->

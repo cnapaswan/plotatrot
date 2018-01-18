@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Comfortaa', cursive;
+}
+
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   background: radial-gradient(#232526, #414345);
+   background-repeat: no-repeat;
+   padding: 3% 0 10%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.logo-holder {
+width: 20%;
+padding-top: 20%;
+border: rgba(255, 255, 255, 0.9) solid 2px;
+border-radius: 50%;
+
+}
+
+#plotatrot {
+  font-family: 'Comfortaa';
+  font-size: 4em;
+  letter-spacing: 0.3em;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 30px 0;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+main {
+  width: 65%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* INDEX PAGE */
+
+.city-wrapper {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 30px;
+  border-radius: 15px;
+  font-size: 5em;
+  padding: 20%;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.city:nth-child(n+0) {background: linear-gradient(to right, #e55d87, #5fc3e4);}
+.city:nth-child(2n+0) {background: linear-gradient(to right, #2b5876, #4e4376);}
+.city:nth-child(3n+0) {background: linear-gradient(to right, #40e0d0, #ff8c00, #ff0080);}
+.city:nth-child(4n+0) {background: linear-gradient(to right, #ff5f6d, #ffc371);}
+.city:nth-child(5n+0) {background: linear-gradient(to right, #355c7d, #6c5b7b, #c06c84);}
+.city:nth-child(6n+0) {background: linear-gradient(to right, #feac5e, #c779d0, #4bc0c8);}
+
+
+/* END OF INDEX PAGE */
+/* START SUMMARY PAGE */
+
+.city-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 5% 2%;
+  margin: 0 auto 5%;
+  font-size: 3em;
+  color: rgba(255, 255, 255, 0.7);
+  background: linear-gradient(217deg, rgba(255, 255, 255, 0), #e55d87, #5fc3e4, rgba(255, 255, 255, 0) 70.71%), 
+            linear-gradient(127deg, rgba(255, 255, 255, 0), #40e0d0, #ff8c00, #ff0080, rgba(255, 255, 255, 0) 70.71%),
+            linear-gradient(336deg, rgba(255, 255, 255, 0), #355c7d, #6c5b7b, #c06c84, rgba(255, 255, 255, 0) 70.71%);
+  border-radius: 30px;
+ }  /*city header all trot pages*/
+
+ .trot-group {
+  position: static;
+  width: 100%;
+  background: rgba(255, 255, 255, 0);
+  padding: 2%;
+  margin: 50px auto;
+  border: dashed 2px white;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+ }
+
+ .trot-head {
+  text-align: center;
+  width: 30%;
+  padding: 15px;
+  font-size: 2.5em;
+  background: linear-gradient(217deg, rgba(255, 255, 255, 0), #2b5876, #4e4376, rgba(255, 255, 255, 0) 70.71%), 
+            linear-gradient(336deg, rgba(255, 255, 255, 0), #40e0d0, #ff8c00, #ff0080, rgba(255, 255, 255, 0) 70.71%),
+            linear-gradient(127deg, rgba(255, 255, 255, 0), #ff5f6d, #ffc371, rgba(255, 255, 255, 0) 70.71%);
+  bottom: 50px;
+  position: relative;
+  align-self: center;
+  border-radius: 5px;
+  
+ }
+
+.trot-list {
+  padding: 0 10% 5%;
+ }
+
+.trots {
+  text-transform: uppercase;
+  padding: 15px;
+  font-size: 1.5em;
+}
+ /* END OF SUMMARY PAGE */}

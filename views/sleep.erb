@@ -1,0 +1,48 @@
+<h1 class="city-head"><%=@trip.city%></h1>
+  <% @trots.each do |trot|%>
+    <h2>
+     <%= trot.name %> 
+    </h2>
+    <img src="<%= trot.image_url%>" alt="" width="400" height="auto">
+    <p>
+     <%= trot.description %> 
+    </p> 
+
+     <form action="/delete/sleep/<%= trot.trip_id %>/<%= trot.id %>" method="post">
+      <input type="hidden" value="delete" name="_method"> 
+      <button>delete this trot</button>
+    </form>
+
+    <h2>notes from friends</h2>
+      <ul>
+        <% trot.comments.each do |comment|%>
+          <li>
+            <%= comment.name %>: <%= comment.body %>
+          </li>
+        <% end %>
+      </ul>
+
+    <h3>comment below</h3>
+      <form action="/comment/sleep" method="post">
+        <label for="">Name</label>
+        <input type="hidden" name="trot_id" value="<%= trot.id %>">
+        <input name="name" type="text">
+        <input name="body" type="text">
+        <button>submit</button>
+      </form>
+  <% end %>
+
+
+<h3>SLEEP WHERE</h3>
+  <form action="/sleep" method="post">
+    <label for="">Name</label>
+      <input name="name" type="text">
+    <label for="">Image url</label>
+      <input name="image_url" type="text">
+    <label for="">Description</label>
+      <input name="description" type="text">
+      <input type="hidden" name="trip_id" value="<%= @trip.id %>">
+      <input type="hidden" name="category" value="sleep">
+    <button>PUSH IT UP BABE</button>
+  </form>
+

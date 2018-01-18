@@ -1,0 +1,23 @@
+<div class="city-wrapper">
+<% @trips.each do |trip| %>
+  
+  <a href="/trips/<%=trip.id%>" class="city">
+    <p class="city-copy"><%=trip.city%></p>
+  </a>
+
+<% end %>
+</div>
+
+<div class="add-city">
+  <form action="/trips" method="post">
+    <label for="">CITY</label>
+    <input type="text" name="city">
+
+    <label for="">COUNTRY</label>
+    <input type="text" name="country">
+
+    <button>launch!</button>
+  </form>
+</div>
+
+
