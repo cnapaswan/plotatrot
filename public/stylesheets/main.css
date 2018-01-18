@@ -24,14 +24,6 @@ ul {
   list-style-type: none;
 }
 
-.logo-holder {
-width: 20%;
-padding-top: 20%;
-border: rgba(255, 255, 255, 0.9) solid 2px;
-border-radius: 50%;
-
-}
-
 #plotatrot {
   font-family: 'Comfortaa';
   font-size: 4em;
@@ -116,14 +108,13 @@ main {
   width: 30%;
   padding: 15px;
   font-size: 2.5em;
-  background: linear-gradient(217deg, rgba(255, 255, 255, 0), #2b5876, #4e4376, rgba(255, 255, 255, 0) 70.71%), 
-            linear-gradient(336deg, rgba(255, 255, 255, 0), #40e0d0, #ff8c00, #ff0080, rgba(255, 255, 255, 0) 70.71%),
-            linear-gradient(127deg, rgba(255, 255, 255, 0), #ff5f6d, #ffc371, rgba(255, 255, 255, 0) 70.71%);
+  background: linear-gradient(217deg, rgba(255, 255, 255, 0.5), #2b5876, #4e4376, rgba(255, 255, 255, 0) 70.71%), 
+            linear-gradient(336deg, rgba(255, 255, 255, 0.5), #40e0d0, #ff8c00, #ff0080, rgba(255, 255, 255, 0) 70.71%),
+            linear-gradient(127deg, rgba(255, 255, 255, 0.5), #ff5f6d, #ffc371, rgba(255, 255, 255, 0) 70.71%);
   bottom: 50px;
   position: relative;
   align-self: center;
   border-radius: 5px;
-  
  }
 
 .trot-list {
@@ -135,4 +126,91 @@ main {
   padding: 15px;
   font-size: 1.5em;
 }
- /* END OF SUMMARY PAGE */}
+ /* END OF SUMMARY PAGE */
+/*START TROT PAGE*/
+
+.trot {
+  width: 60%;
+  margin: 20px 0;
+  padding: 20px;
+  background: mistyrose;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trot:nth-child(n+0) {background: linear-gradient(to right, #e55d87, #5fc3e4);}
+.trot:nth-child(2n+0) {background: linear-gradient(to right, #2b5876, #4e4376);}
+.trot:nth-child(3n+0) {background: linear-gradient(to right, #40e0d0, #ff8c00, #ff0080);}
+.trot:nth-child(4n+0) {background: linear-gradient(to right, #ff5f6d, #ffc371);}
+.trot:nth-child(5n+0) {background: linear-gradient(to right, #355c7d, #6c5b7b, #c06c84);}
+.trot:nth-child(6n+0) {background: linear-gradient(to right, #feac5e, #c779d0, #4bc0c8);}
+
+.inner-trot {
+  width: 100%;
+  background: rgba(52, 60, 60, 0.8);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.trot-name {
+color: rgba(255, 255, 255, 0.9);
+padding: 10px 0;
+text-transform: capitalize;
+}
+
+img {
+  max-width: 95%;
+  padding: 10px;
+}
+
+.caption {
+  padding: 15px 25px;
+}
+
+.comment-box {
+  width: 90%;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px; 
+  margin: 0 10px 15px;
+}
+
+.comment-form {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 20px;
+}
+
+
+.comment-name {
+  width: 20%;
+  padding-right: 5px;
+  background: rgba(255, 255, 255, 0.8);
+
+}
+
+.comment-body {
+  width: 70%;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.submit-comment {
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+  width: 7%;
+  background: rgba(255, 255, 255, 0);
+}
+
+.delete-trot {
+  width: 30px;
+  padding-top: 30px; 
+  border-radius: 50%;
+}
+
+
+/*END OF TROT PAGE*/

@@ -1,35 +1,44 @@
 <h1 class="city-head"><%=@trip.city%></h1>
   <% @trots.each do |trot|%>
-    <h2>
-     <%= trot.name %> 
-    </h2>
-    <img src="<%= trot.image_url%>" alt="" width="400" height="auto">
-    <p>
-     <%= trot.description %> 
-    </p> 
 
-     <form action="/delete/go/<%= trot.trip_id %>/<%= trot.id %>" method="post">
-      <input type="hidden" value="delete" name="_method"> 
-      <button>delete this trot</button>
-    </form>
+    <div class="trot">
+      <div class="inner-trot">
+        <h2 class="trot-name">
+          ⦁ &nbsp;&nbsp;<%= trot.name %>&nbsp;&nbsp; ⦁
+        </h2>
+        <img src="<%= trot.image_url%>" alt="">
+        <p class="caption"> 
+          " <%= trot.description %>.." 
+        </p> 
 
-    <h2>notes from friends</h2>
-      <ul>
-        <% trot.comments.each do |comment|%>
+
+        <ul class="comment-box">
+          <% trot.comments.each do |comment|%>
           <li>
-            <%= comment.name %>: <%= comment.body %>
+              <%= comment.name %>: <%= comment.body %>
           </li>
-        <% end %>
-      </ul>
+          <% end %>
+        </ul>
 
-    <h3>comment below</h3>
-      <form action="/comment/go" method="post">
-        <label for="">Name</label>
-        <input type="hidden" name="trot_id" value="<%= trot.id %>">
-        <input name="name" type="text">
-        <input name="body" type="text">
-        <button>submit</button>
-      </form>
+
+        <form class="comment-form" action="/comment/go" method="post">
+          <input type="hidden" name="trot_id" value="<%= trot.id %>">
+          <input class="comment-name" name="name" type="text" value="your name">
+          <input class="comment-body" name="body" type="text" value="comment here...">
+
+          <button class="submit-comment">
+          ▲
+          </button>
+
+        </form> <!-- end of comment-->
+
+        <form action="/delete/go/<%= trot.trip_id %>/<%= trot.id %>" method="post">
+          <input type="hidden" value="delete" name="_method"> 
+          <button class="delete-trot">x</button>
+        </form> <!-- end of delete button-->    
+      </div> <!-- end of inner-trot -->
+    </div> <!-- end of trot -->
+
   <% end %>
 
 
