@@ -27,6 +27,7 @@ ul {
 #plotatrot {
   font-family: 'Comfortaa';
   font-size: 4em;
+  text-shadow: 1px 1px 1px rgba(255,255,255, .5);
   letter-spacing: 0.3em;
   color: rgba(255, 255, 255, 0.9);
   padding: 30px 0;
@@ -59,8 +60,9 @@ main {
   margin: 30px;
   border-radius: 15px;
   font-size: 5em;
+  text-shadow: 0.5px 0.5px 0.5px rgba(255,255,255, .5);
   padding: 20%;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .city:nth-child(n+0) {background: linear-gradient(to right, #e55d87, #5fc3e4);}
@@ -70,6 +72,9 @@ main {
 .city:nth-child(5n+0) {background: linear-gradient(to right, #355c7d, #6c5b7b, #c06c84);}
 .city:nth-child(6n+0) {background: linear-gradient(to right, #feac5e, #c779d0, #4bc0c8);}
 
+.city-copy{
+  text-transform: lowercase;
+}
 
 /* END OF INDEX PAGE */
 /* START SUMMARY PAGE */
@@ -82,6 +87,7 @@ main {
   padding: 5% 2%;
   margin: 0 auto 5%;
   font-size: 3em;
+  text-shadow: 0.5px 0.5px 0.5px rgba(255,255,255, .5);
   color: rgba(255, 255, 255, 0.7);
   background: linear-gradient(217deg, rgba(255, 255, 255, 0), #e55d87, #5fc3e4, rgba(255, 255, 255, 0) 70.71%), 
             linear-gradient(127deg, rgba(255, 255, 255, 0), #40e0d0, #ff8c00, #ff0080, rgba(255, 255, 255, 0) 70.71%),
@@ -107,6 +113,7 @@ main {
   text-align: center;
   width: 30%;
   padding: 15px;
+  text-shadow: 0.5px 0.5px 0.5px rgba(255,255,255, .5);
   font-size: 2.5em;
   background: linear-gradient(217deg, rgba(255, 255, 255, 0.5), #2b5876, #4e4376, rgba(255, 255, 255, 0) 70.71%), 
             linear-gradient(336deg, rgba(255, 255, 255, 0.5), #40e0d0, #ff8c00, #ff0080, rgba(255, 255, 255, 0) 70.71%),
@@ -158,6 +165,7 @@ main {
 
 .trot-name {
 color: rgba(255, 255, 255, 0.9);
+text-shadow: 0.5px 0.5px 0.5px rgba(255,255,255, .5);
 padding: 10px 0;
 text-transform: capitalize;
 }
@@ -173,10 +181,17 @@ img {
 
 .comment-box {
   width: 90%;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(254, 249, 231, 0.5);
   padding: 10px; 
   margin: 0 10px 15px;
+  line-height: 2;
+  font-size: 1.1em;
 }
+
+.comment-box>li:nth-child(n+0){color: #283747;}
+.comment-box>li:nth-child(2n+0){color: #BA4A00;}
+.comment-box>li:nth-child(3n+0){color: #CB4335;}
+.comment-box>li:nth-child(4n+0){color: #138D75;}
 
 .comment-form {
   width: 90%;
@@ -188,13 +203,17 @@ img {
 
 .comment-name {
   width: 20%;
+  text-align: center;
   padding-right: 5px;
+  font-family: 'Raleway', sans-serif;
   background: rgba(255, 255, 255, 0.8);
 
 }
 
 .comment-body {
   width: 70%;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
   background: rgba(255, 255, 255, 0.8);
 }
 
@@ -206,11 +225,76 @@ img {
   background: rgba(255, 255, 255, 0);
 }
 
-.delete-trot {
-  width: 30px;
-  padding-top: 30px; 
-  border-radius: 50%;
+.delete-trot {background: none}
+
+.material-icons { 
+  color: rgba(255, 255, 255, 1); 
+  font-size: 24px;
 }
 
+.add-head {
+  text-align: center;
+  width: 30%;
+  padding: 15px;
+  font-size: 2.5em;
+  background: linear-gradient(217deg, rgba(255, 255, 255, 0.5), #2b5876, #4e4376, rgba(255, 255, 255, 0) 70.71%), 
+            linear-gradient(336deg, rgba(255, 255, 255, 0.5), #40e0d0, #ff8c00, #ff0080, rgba(255, 255, 255, 0) 70.71%),
+            linear-gradient(127deg, rgba(255, 255, 255, 0.5), #ff5f6d, #ffc371, rgba(255, 255, 255, 0) 70.71%);
+  position: relative;
+  align-self: center;
+  border-radius: 5px;
+}
+
+i.location {
+  color: rgba(255, 255, 255, 1); 
+  margin: 5% 0;
+  font-size: 96px;
+  margin: 5 % 0;
+}
+
+h3.trot-head.add-head {bottom: 75px;}
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  position: relative;
+  bottom: 25px;
+}
+
+.name-ipt, .img-ipt, .capt-ipt {
+  width: 60%;
+  padding-bottom: 2%;
+  margin: 1% 0;
+  background: rgba(255, 255, 255, 0.5);
+}
+button {
+  width: 10%;
+  background: none;
+}
+
+.trot-group.add-ct-idx {
+  width: 65%;
+  padding: 5% 0 2%;
+}
+
+.add-form.add-city { position: static;}
+
+.add-form.add-city > .name-ipt {
+  margin: 5% 0;
+  position: static;
+}
+
+.add-icon.md-36 {
+  color: #CB4335;
+  font-size: 36px;
+  margin: -20% 0 0;
+}
 
 /*END OF TROT PAGE*/
+
+.hidden-form {
+  display: none;
+}

@@ -11,7 +11,6 @@
           " <%= trot.description %>.." 
         </p> 
 
-
         <ul class="comment-box">
           <% trot.comments.each do |comment|%>
           <li>
@@ -20,10 +19,9 @@
           <% end %>
         </ul>
 
-
         <form class="comment-form" action="/comment/go" method="post">
           <input type="hidden" name="trot_id" value="<%= trot.id %>">
-          <input class="comment-name" name="name" type="text" value="your name">
+          <input class="comment-name" name="name" type="text" value="name">
           <input class="comment-body" name="body" type="text" value="comment here...">
 
           <button class="submit-comment">
@@ -34,24 +32,33 @@
 
         <form action="/delete/go/<%= trot.trip_id %>/<%= trot.id %>" method="post">
           <input type="hidden" value="delete" name="_method"> 
-          <button class="delete-trot">x</button>
+            <button class="delete-trot">
+              <i class="material-icons md-light md-24">delete_forever</i>
+            </button>
         </form> <!-- end of delete button-->    
+
       </div> <!-- end of inner-trot -->
     </div> <!-- end of trot -->
 
   <% end %>
 
+<i class="material-icons md-light md-96 location show-hid">location_on</i>
 
-<h3>GO WHERE</h3>
-  <form action="/go" method="post">
-    <label for="">Name</label>
-      <input name="name" type="text">
-    <label for="">Image url</label>
-      <input name="image_url" type="text">
-    <label for="">Description</label>
-      <input name="description" type="text">
-      <input type="hidden" name="trip_id" value="<%= @trip.id %>">
-      <input type="hidden" name="category" value="go">
-    <button>PUSH IT UP BABE</button>
+<div class="trot-group hidden-form">
+  <h3 class="trot-head add-head">GO WHERE</h3>
+    <form class="add-form" action="/go" method="post">
+      <label for="">Name</label>
+        <input class="name-ipt" name="name" type="text">
+      <label for="">Image url</label>
+        <input class="img-ipt" name="image_url" type="text">
+      <label for="">Description</label>
+        <input class="capt-ipt" name="description" type="text">
+        <input type="hidden" name="trip_id" value="<%= @trip.id %>">
+        <input type="hidden" name="category" value="go">
+
+    <button>
+      <i class="material-icons md-light md-36 add-icon">add</i>
+    </button>
   </form>
+</div>
 

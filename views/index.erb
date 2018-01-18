@@ -8,15 +8,18 @@
 <% end %>
 </div>
 
-<div class="add-city">
-  <form action="/trips" method="post">
+<i class="material-icons md-light md-96 location show-hid">add_circle</i>
+
+<div class="trot-group add-ct-idx hidden-form">
+  <form class="add-form add-city" action="/trips" method="post">
     <label for="">CITY</label>
-    <input type="text" name="city">
-
+    <input class="name-ipt" type="text" name="city">
     <label for="">COUNTRY</label>
-    <input type="text" name="country">
+    <input class="name-ipt" type="text" name="country">
 
-    <button>launch!</button>
+    <button>
+      <i class="material-icons md-light md-36 add-icon">add</i>
+    </button>
   </form>
 </div>
 
