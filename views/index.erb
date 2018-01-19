@@ -1,9 +1,18 @@
 <div class="city-wrapper">
 <% @trips.each do |trip| %>
-  
+
+
   <a href="/trips/<%=trip.id%>" class="city">
     <p class="city-copy"><%=trip.city%></p>
   </a>
+  
+  <form action="/<%= trip.id%>/delete" method="post">
+    <input type="hidden" value="delete" name="_method">
+      <button class="delete-trot">
+        <i class="material-icons smd-light md-24 city-bin">delete_forever</i>
+      </button>
+  </form>
+
 
 <% end %>
 </div>

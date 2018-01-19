@@ -21,6 +21,13 @@ require_relative 'models/comment'
 
     redirect '/'
   end
+
+  delete '/:id/delete' do
+    city = Trip.find(params[:id])
+    city.destroy
+
+    redirect '/'
+  end
 #homepage ends
 
 #trip summary page starts

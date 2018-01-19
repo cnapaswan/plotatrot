@@ -42,6 +42,7 @@ main {
   flex-direction: column;
 }
 
+
 /* INDEX PAGE */
 
 .city-wrapper {
@@ -63,6 +64,7 @@ main {
   text-shadow: 0.5px 0.5px 0.5px rgba(255,255,255, .5);
   padding: 20%;
   color: rgba(255, 255, 255, 0.5);
+  position: relative;
 }
 
 .city:nth-child(n+0) {background: linear-gradient(to right, #e55d87, #5fc3e4);}
@@ -74,7 +76,20 @@ main {
 
 .city-copy{
   text-transform: lowercase;
+  position: static;
 }
+
+.city > i.material-icons.md-36.opt-btn {
+  font-size: 36px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.delete-trot > i.material-icons.md-24.city-bin {
+  font-size: 24px;
+}
+
 
 /* END OF INDEX PAGE */
 /* START SUMMARY PAGE */
@@ -290,7 +305,7 @@ button {
 .add-icon.md-36 {
   color: #CB4335;
   font-size: 36px;
-  margin: -20% 0 0;
+  padding: 20% 0 0;
 }
 
 /*END OF TROT PAGE*/
